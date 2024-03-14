@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Agregado Exitosamente</title>
+    <!-- Agregar estilos de Bootstrap u otros estilos si es necesario -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Producto Agregado Exitosamente</h1>
+            <p class="lead">El producto <strong>{{ producto.nombre }}</strong> ha sido agregado exitosamente con el siguiente detalle:</p>
+            <hr class="my-4">
+            <p class="lead">
+                <strong>Nombre:</strong> {{ producto.nombre }}<br>
+                <strong>Precio:</strong> {{ producto.precio }}<br>
+                <strong>Stock Actual:</strong> {{ producto.stock_actual }}<br>
+                <strong>Proveedor:</strong> {{ producto.proveedor }}<br>
+            </p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{% url 'listar_productos' %}" role="button">Volver al listado de productos</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
